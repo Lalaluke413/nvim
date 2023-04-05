@@ -8,5 +8,10 @@
   "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
   "nvim-cmp": { "branch": "main", "commit": "777450fd0ae289463a14481673e26246b5e38bf2" },
+  "nvim-treesitter": { "branch": "master", "commit": "411e771d511442ab81670701f5c830f6c74aadd7" },
+  "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
+  "ripgrep": { "branch": "master", "commit": "041544853c86dde91c49983e5ddd0aa799bd2831" },
+  "telescope-zf-native.nvim": { "branch": "master", "commit": "beb34b6c48154ec117930180f257a5592606d48f" },
+  "telescope.nvim": { "branch": "master", "commit": "942fe5faef47b21241e970551eba407bc10d9547" },
   "tokyonight.nvim": { "branch": "main", "commit": "1b0c88094548a62641ece1e668fa9a234e1c539e" }
 }

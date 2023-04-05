@@ -24,7 +24,7 @@ vim.opt.colorcolumn = "80"
 
 -- setup vim keybindings
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- open file manager
 
 
 -- lazy.vim plugin manager
@@ -59,6 +59,15 @@ require('lazy').setup({
     {'saadparwaiz1/cmp_luasnip'},
     {'uga-rosa/cmp-dictionary'},
     {'onsails/lspkind.nvim'}, -- formatting in autocomplete menu
+
+    -- treesitter
+    {'nvim-treesitter/nvim-treesitter'},
+
+    -- telescope (fuzzy finder)
+    {'nvim-lua/plenary.nvim'}, -- dependancy
+    {'BurntSushi/ripgrep'}, -- OMG I LOVE RUST
+    {'nvim-telescope/telescope.nvim'},
+    {'natecraddock/telescope-zf-native.nvim'}, --
 })
 
 -- apply colorscheme
@@ -142,11 +151,66 @@ cmp.setup({
 -- setup dictionary for autocomplete
 local dict = require("cmp_dictionary")
 
-dict.switcher({
+dict.switcher({ 
     spelllang = {
         en = "./en.dict",
     },
 })
 
+-- setup telescope
+require("telescope").setup {
+    pickers = {
+        find_files = {
+            mappings =  {
+                i = {
+                    ["<Tab>"] = require('telescope.actions').move_selection_next, -- Tab doesn't select items
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Esc>"] = require('telescope.actions').close, -- Esc closes telescope in insert mode
+                },
+                n = { 
+                    ["<Tab>"] = require('telescope.actions').move_selection_next,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                },
+            },
+        },
+        live_grep = {
+            mappings =  {
+                i = {
+                    ["<Tab>"] = require('telescope.actions').move_selection_next,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Esc>"] = require('telescope.actions').close,
+                },
+                n = { 
+                    ["<Tab>"] = require('telescope.actions').move_selection_next,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                },
+            },
+        },
+        buffers = {
+            mappings =  {
+                i = {
+                    ["<Tab>"] = require('telescope.actions').move_selection_next,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Esc>"] = require('telescope.actions').close,
+                },
+                n = { 
+                    ["<Tab>"] = require('telescope.actions').move_selection_next,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                },
+            },
+        }
+    },
+}
+
+
 vim.cmd.set('spelllang=en')
+
+-- plugin keybindings
+
+-- telescope
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- find files
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) -- find text
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- find buffers
 
