@@ -24,6 +24,7 @@ vim.opt.colorcolumn = "80"
 
 -- setup vim keybindings
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 
 -- lazy.vim plugin manager
