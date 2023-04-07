@@ -27,10 +27,11 @@ require('lazy').setup({
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-nvim-lua'},
     {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-buffer'},
+
+    {'tzachar/cmp-fuzzy-buffer', dependencies = {'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim'}},
+
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
-    {'uga-rosa/cmp-dictionary'},
     {'onsails/lspkind.nvim'}, -- formatting in autocomplete menu
 
     -- treesitter
@@ -40,5 +41,6 @@ require('lazy').setup({
     {'nvim-lua/plenary.nvim'}, -- dependancy
     {'BurntSushi/ripgrep'}, -- OMG I LOVE RUST
     {'nvim-telescope/telescope.nvim'},
-    {'natecraddock/telescope-zf-native.nvim'}, --
+    {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
+    {'tzachar/fuzzy.nvim', dependencies = {'nvim-telescope/telescope-fzf-native.nvim'}},
 })

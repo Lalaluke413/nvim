@@ -47,8 +47,7 @@ cmp.setup({
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        { name = "dictionary", keyword_length = 2 },
-        { name = "buffer", keyword_length = 4 },
+        { name = "fuzzy_buffer", keyword_length = 4 },
     }),
 
     -- formatting in autocomplete menu
@@ -56,11 +55,10 @@ cmp.setup({
         format = lspkind.cmp_format {
             with_text = true,
             menu = {
-                buffer = "[buf]",
+                fuzzy_buffer = "[buf]",
                 nvim_lsp = "[LSP]",
                 nvim_lua = "[api]",
                 luasnip = "[snip]",
-                dictionary = "[dict]",
             },
         },
     },
