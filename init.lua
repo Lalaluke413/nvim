@@ -18,7 +18,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-    
     -- install plugins
 
     {'folke/tokyonight.nvim'}, -- colorscheme
@@ -34,6 +33,8 @@ require('lazy').setup({
     {'saadparwaiz1/cmp_luasnip'},
     {'onsails/lspkind.nvim'}, -- formatting in autocomplete menu
 
+    {'geoffleyland/lua-csv'},
+
     -- treesitter
     {'nvim-treesitter/nvim-treesitter'},
 
@@ -44,3 +45,5 @@ require('lazy').setup({
     {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {'tzachar/fuzzy.nvim', dependencies = {'nvim-telescope/telescope-fzf-native.nvim'}},
 })
+
+

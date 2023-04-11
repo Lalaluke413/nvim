@@ -7,6 +7,7 @@
   "fuzzy.nvim": { "branch": "master", "commit": "04b3d969002b5fd2db23a33aaf33a13a533cbdbd" },
   "lazy.nvim": { "branch": "main", "commit": "57cce98dfdb2f2dd05a0567d89811e6d0505e13b" },
   "lspkind.nvim": { "branch": "master", "commit": "c68b3a003483cf382428a43035079f78474cd11e" },
+  "lua-csv": { "branch": "master", "commit": "09557e4608b02d136b9ae39a8fa0f36328fa1cec" },
   "nvim-cmp": { "branch": "main", "commit": "777450fd0ae289463a14481673e26246b5e38bf2" },
   "nvim-treesitter": { "branch": "master", "commit": "411e771d511442ab81670701f5c830f6c74aadd7" },
   "plenary.nvim": { "branch": "master", "commit": "253d34830709d690f013daf2853a9d21ad7accab" },
