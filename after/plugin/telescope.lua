@@ -5,39 +5,39 @@ require("telescope").setup {
         find_files = {
             mappings =  {
                 i = {
-                    ["<Tab>"] = require('telescope.actions').move_selection_next, -- Tab doesn't select items
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous, -- Tab doesn't select items
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                     ["<Esc>"] = require('telescope.actions').close, -- Esc closes telescope in insert mode
                 },
                 n = { 
-                    ["<Tab>"] = require('telescope.actions').move_selection_next,
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                 },
             },
         },
         live_grep = {
             mappings =  {
                 i = {
-                    ["<Tab>"] = require('telescope.actions').move_selection_next,
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                     ["<Esc>"] = require('telescope.actions').close,
                 },
                 n = { 
-                    ["<Tab>"] = require('telescope.actions').move_selection_next,
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                 },
             },
         },
         buffers = {
             mappings =  {
                 i = {
-                    ["<Tab>"] = require('telescope.actions').move_selection_next,
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                     ["<Esc>"] = require('telescope.actions').close,
                 },
                 n = { 
-                    ["<Tab>"] = require('telescope.actions').move_selection_next,
-                    ["<S-Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<Tab>"] = require('telescope.actions').move_selection_previous,
+                    ["<S-Tab>"] = require('telescope.actions').move_selection_next,
                 },
             },
         }
