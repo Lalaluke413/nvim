@@ -41,6 +41,9 @@ require('lazy').setup({
     {'williamboman/mason.nvim', build=':MasonUpdate'},
     {'williamboman/mason-lspconfig.nvim'},
     {'neovim/nvim-lspconfig'},
+
+    -- status line
+    {'nvim-lualine/lualine.nvim'},
+    {'nvim-tree/nvim-web-devicons'},
+
 })
-
-
