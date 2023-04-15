@@ -45,5 +45,7 @@ require('lazy').setup({
     -- status line
     {'nvim-lualine/lualine.nvim'},
     {'nvim-tree/nvim-web-devicons'},
-
+    
+    -- tmux navigation
+    {'christoomey/vim-tmux-navigator'},
 })
