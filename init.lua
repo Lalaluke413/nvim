@@ -32,15 +32,23 @@ require('lazy').setup({
     {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {'tzachar/fuzzy.nvim', dependencies = {'nvim-telescope/telescope-fzf-native.nvim'}},
     
-    -- autocomplete (coq)
-    {'ms-jpq/coq_nvim', branch='coq'},
-    {'ms-jpq/coq.artifacts', branch='artifacts'},
-    {'ms-jpq/coq.thirdparty', branch='3p'},
+    -- autocomplete (cmp) and sources
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+
+    -- snippets
+    {'L3MON4D3/LuaSnip'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'rafamadriz/friendly-snippets'},
 
     -- LSP
     {'williamboman/mason.nvim', build=':MasonUpdate'},
     {'williamboman/mason-lspconfig.nvim'},
     {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'glepnir/lspsaga.nvim', branch = 'main', event = 'LspAttach', dependencies = {{'nvim-tree/nvim-web-devicons'}, {'nvim-treesitter/nvim-treesitter'}}},
+    {'onsails/lspkind.nvim'},
 
     -- status line
     {'nvim-lualine/lualine.nvim'},
