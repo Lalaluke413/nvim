@@ -1,4 +1,4 @@
-require('my_settings')
+require('user')
 
 -- lazy.vim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -22,19 +22,6 @@ require('lazy').setup({
 
     {'folke/tokyonight.nvim'}, -- colorscheme
 
-    -- autocomplete
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lua'},
-    {'hrsh7th/cmp-nvim-lsp'},
-
-    {'tzachar/cmp-fuzzy-buffer', dependencies = {'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim'}},
-
-    {'L3MON4D3/LuaSnip'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'onsails/lspkind.nvim'}, -- formatting in autocomplete menu
-
-    {'geoffleyland/lua-csv'},
-
     -- treesitter
     {'nvim-treesitter/nvim-treesitter'},
 
@@ -44,6 +31,21 @@ require('lazy').setup({
     {'nvim-telescope/telescope.nvim'},
     {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {'tzachar/fuzzy.nvim', dependencies = {'nvim-telescope/telescope-fzf-native.nvim'}},
+    
+    -- autocomplete (coq)
+    {'ms-jpq/coq_nvim', branch='coq'},
+    {'ms-jpq/coq.artifacts', branch='artifacts'},
+    {'ms-jpq/coq.thirdparty', branch='3p'},
+
+    -- LSP
+    {'williamboman/mason.nvim', build=':MasonUpdate'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'neovim/nvim-lspconfig'},
+
+    -- status line
+    {'nvim-lualine/lualine.nvim'},
+    {'nvim-tree/nvim-web-devicons'},
+    
+    -- tmux navigation
+    {'christoomey/vim-tmux-navigator'},
 })
-
-
