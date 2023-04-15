@@ -31,7 +31,7 @@ require('lazy').setup({
     {'nvim-telescope/telescope.nvim'},
     {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {'tzachar/fuzzy.nvim', dependencies = {'nvim-telescope/telescope-fzf-native.nvim'}},
-    
+
     -- autocomplete (cmp) and sources
     {'hrsh7th/nvim-cmp'},
     {'hrsh7th/cmp-buffer'},
@@ -53,7 +53,7 @@ require('lazy').setup({
     -- status line
     {'nvim-lualine/lualine.nvim'},
     {'nvim-tree/nvim-web-devicons'},
-    
+
     -- tmux navigation
     {'christoomey/vim-tmux-navigator'},
 
