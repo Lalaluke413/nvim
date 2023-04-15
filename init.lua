@@ -48,4 +48,10 @@ require('lazy').setup({
     
     -- tmux navigation
     {'christoomey/vim-tmux-navigator'},
+
+    -- commenting with gc
+    {'numToStr/Comment.nvim'},
+
+    -- file explorer
+    {'nvim-tree/nvim-tree.lua'},
 })
