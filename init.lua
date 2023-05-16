@@ -1,5 +1,7 @@
 require('user')
 
+
+
 -- lazy.vim plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
@@ -38,9 +40,8 @@ require('lazy').setup({
     {'hrsh7th/cmp-path'},
 
     -- snippets
-    {'L3MON4D3/LuaSnip'},
+    {'L3MON4D3/LuaSnip'--[[ , dependencies = {'rafamadriz/friendly-snippets'} ]]},
     {'saadparwaiz1/cmp_luasnip'},
-    {'rafamadriz/friendly-snippets'},
 
     -- LSP
     {'williamboman/mason.nvim', build=':MasonUpdate'},
@@ -61,5 +62,4 @@ require('lazy').setup({
     {'numToStr/Comment.nvim'},
 
     -- file explorer
-    {'nvim-tree/nvim-tree.lua'},
 })
