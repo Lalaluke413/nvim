@@ -32,4 +32,4 @@ vim.opt.backspace = "indent,eol,start"
 -- make "-" part of words
 vim.opt.iskeyword:append("-")
 
-
+vim.opt.signcolumn = "yes"
