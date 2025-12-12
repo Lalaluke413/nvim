@@ -40,7 +40,7 @@ require('lazy').setup({
     {'hrsh7th/cmp-path'},
 
     -- snippets
-    {'L3MON4D3/LuaSnip'--[[ , dependencies = {'rafamadriz/friendly-snippets'} ]]},
+    {'L3MON4D3/LuaSnip', version = 'v2.*', build = 'make install_jsregexp'},
     {'saadparwaiz1/cmp_luasnip'},
 
     -- LSP
@@ -61,5 +61,6 @@ require('lazy').setup({
     -- commenting with gc
     {'numToStr/Comment.nvim'},
 
-    -- file explorer
+    -- transparent
+    --{'xiyaowong/transparent.nvim'},
 })
