@@ -62,5 +62,5 @@ require('lazy').setup({
     {'numToStr/Comment.nvim'},
 
     -- transparent
-    {'xiyaowong/transparent.nvim'},
+    --{'xiyaowong/transparent.nvim'},
 })
